@@ -1,0 +1,22 @@
+[
+    {
+        "family": "modam",
+        "fonts": [
+            {
+                "asset": "fonts/Modam-Regular.ttf"
+            },
+            {
+                "asset": "fonts/Modam-Medium.ttf",
+                "weight": 100
+            },
+            {
+                "asset": "fonts/Modam-Bold.ttf",
+                "weight": 300
+            },
+            {
+                "asset": "fonts/Modam-ExtraBold.ttf",
+                "weight": 500
+            }
+        ]
+    }
+]

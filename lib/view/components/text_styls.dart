@@ -1,0 +1,8 @@
+import 'package:flutter/material.dart';
+import 'package:gym_dashboard_project/view/components/App_colors.dart';
+
+class AppTextStyle {
+static const bold_24 = TextStyle(
+           color: AppColors.secondary,
+            fontFamily: "modam" , fontWeight: FontWeight.bold , fontSize: 24.0);  
+} 
