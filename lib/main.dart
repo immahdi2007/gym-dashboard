@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Example Gym',
-      locale: Locale("fa"),
+      locale: Locale("fa", "IR"),
       supportedLocales: [Locale('fa')],
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
@@ -29,7 +29,14 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MainPage()
+      home: MainPage(),
+      
+      builder: (context, child) {
+         return Directionality(
+           textDirection: TextDirection.rtl,
+           child: child!,
+          );  
+      }
     );
   }
 }
