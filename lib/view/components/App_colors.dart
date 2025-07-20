@@ -7,6 +7,7 @@ class AppColors {
   static const Color surface = Color(0xFFF5F5F5);     // سطح کارت‌ها
   static const Color textPrimary = Color(0xFF000000); // متن اصلی
   static const Color errorColor = Color(0xFFB00020); // متن فرعی
+  static const Color hoverPurple = Color(0xFFE9DFFF); // متن فرعی
 
   static const container_shadow = [
               BoxShadow(

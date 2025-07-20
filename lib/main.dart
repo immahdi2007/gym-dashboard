@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:gym_dashboard_project/view/components/App_colors.dart';
-import 'package:gym_dashboard_project/view/main_page/main_page.dart';
+import 'package:gym_dashboard_project/view/pages/main_page.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:gym_dashboard_project/router.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
+  setPathUrlStrategy();
   runApp(const MyApp());
 }
 
@@ -12,7 +15,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Example Gym',
       locale: Locale("fa", "IR"),
       supportedLocales: [Locale('fa')],
@@ -29,14 +32,14 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MainPage(),
+      routerConfig: appRouter,
       
       builder: (context, child) {
          return Directionality(
            textDirection: TextDirection.rtl,
            child: child!,
           );  
-      }
+      } 
     );
   }
 }
