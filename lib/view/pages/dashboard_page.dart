@@ -5,10 +5,10 @@ class DashboardPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-         title: Title(color: Colors.black, child: Text("dashboard")),
-       )
-    );
+    return Container(
+      child: Text("dashboard")
+      );
+
+  
   }
 }

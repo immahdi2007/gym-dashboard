@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gym_dashboard_project/view/pages/bodybuilder_page.dart';
 import 'package:gym_dashboard_project/view/pages/dashboard_page.dart';
 import 'package:gym_dashboard_project/view/pages/main_page.dart';
+import 'package:gym_dashboard_project/view/pages/welcome_page.dart';
 import 'package:gym_dashboard_project/view/pages/workout_plans.dart';
 import 'package:path/path.dart';
 
@@ -20,7 +21,12 @@ import 'package:path/path.dart';
 // };
 
 
-final GoRouter appRouter = GoRouter(initialLocation: '/', routes: [
+final GoRouter appRouter = GoRouter(initialLocation: '/welcome', routes: [
+  GoRoute(
+    path: '/welcome',
+    name: 'welcome',
+    builder: (context, state) => WelcomePage(),
+  ),
   ShellRoute(
       builder: (context, state, child) => MainPage(child: child),
       routes: [

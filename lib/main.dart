@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Example Gym',
+      title: 'Nitrogen Gym',
       locale: Locale("fa", "IR"),
       supportedLocales: [Locale('fa')],
       localizationsDelegates: [
@@ -28,10 +28,11 @@ class MyApp extends StatelessWidget {
         fontFamily: "modam",
         primaryColor: AppColors.primary,
         scaffoldBackgroundColor: AppColors.background,
-
+        splashFactory: InkRipple.splashFactory,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+
       routerConfig: appRouter,
       
       builder: (context, child) {

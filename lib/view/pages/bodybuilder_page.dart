@@ -33,10 +33,14 @@ class BodyBuildersPage extends StatelessWidget {
           )),
           Expanded(
             flex: 1, 
-            child: Align(
-            alignment: Alignment.centerRight ,
-            child: AppTextFeild(text: "جستجو", text_icon: Icons.search
-                      ))),
+            child: Container(
+              decoration: BoxDecoration(color: Colors.black,),
+                
+              child: Align(
+              alignment: Alignment.centerRight ,
+              child: AppTextFeild(text: "جستجو", text_icon: Icons.search
+                        )),
+            )),
           SizedBox(height: 25,),
 
           Expanded(
