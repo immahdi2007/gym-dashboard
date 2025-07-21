@@ -5,10 +5,6 @@ class WorkOutPlans extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("work out plans"),
-      ),
-    );
+    return Text("workout plans");
   }
 }

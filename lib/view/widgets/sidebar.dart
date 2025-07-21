@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gym_dashboard_project/view/components/App_colors.dart';
-import 'package:gym_dashboard_project/view/components/sidebar_text.dart';
+import 'package:gym_dashboard_project/view/theme/App_colors.dart';
+import 'package:gym_dashboard_project/view/widgets/sidebar_text.dart';
 
 class SideBar extends StatefulWidget {
   const SideBar({super.key});

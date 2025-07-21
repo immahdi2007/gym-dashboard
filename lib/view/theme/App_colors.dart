@@ -8,19 +8,7 @@ class AppColors {
   static const Color textPrimary = Color(0xFF000000); // متن اصلی
   static const Color errorColor = Color(0xFFB00020); // متن فرعی
   static const Color hoverPurple = Color(0xFFE9DFFF); // متن فرعی
+  static BorderRadius radius_10 = BorderRadius.circular(10.0); 
 
-  static const container_shadow = [
-              BoxShadow(
-                color: Color.fromARGB(190, 155, 155, 155),
-                spreadRadius: 0,
-                blurRadius: 12,
-                offset: Offset(6, 6)
-              ),
-              BoxShadow(
-                color: Color.fromARGB(186, 235, 235, 235),
-                spreadRadius: 0,
-                blurRadius: 12,
-                offset: Offset(-6, -6)
-              ),
-            ];
+
 }
