@@ -14,7 +14,7 @@ class WelcomePage extends StatelessWidget {
       body: Stack(
         children: [
           Positioned(
-                  child: SvgPicture.network('icons/weightlifting.svg', width: 800, height: 800,)
+                child: SvgPicture.network('icons/weightlifting.svg', width: 800, height: 800,)
           ),
           Center(
           child: Column(
@@ -25,7 +25,7 @@ class WelcomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  AppButton(text: "ورود", onPressed: () {context.go("/sing_up");},),
+                  AppButton(text: "ورود", onPressed: () {context.go("/");},),
                   SizedBox(width: 20,),
                   AppButton(text: "ثبت نام", onPressed:  () {context.go("/login_up");},)
                 ],
