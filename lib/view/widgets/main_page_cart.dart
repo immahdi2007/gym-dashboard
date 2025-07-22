@@ -12,13 +12,13 @@ class MainPageCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      elevation: 2,
-      borderRadius: AppRadius.radius_10,
+      elevation: AppElevation.EL_2,
+      borderRadius: AppRadius.radius_5,
       child: Container(
         width: 270,
         decoration: BoxDecoration(
           color: AppColors.surface,
-          borderRadius: AppRadius.radius_10,
+          borderRadius: AppRadius.radius_5,
         ),
         padding: EdgeInsets.only(top: 19.0, left: 35.0, right: 35.0, bottom: 12),
         child: Column(

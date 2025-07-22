@@ -15,7 +15,7 @@ class AppButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed, 
         style: ButtonStyle(
-          elevation: MaterialStateProperty.all(2),
+          elevation: MaterialStateProperty.all(AppElevation.EL_2),
           shadowColor: MaterialStateProperty.all(Colors.black),
           surfaceTintColor: MaterialStateProperty.all(Colors.transparent),
           backgroundColor: MaterialStateProperty.resolveWith((states) {
@@ -48,7 +48,7 @@ class AppButton extends StatelessWidget {
             )
           )
         ),
-        child: Text(text, style: TextStyle(fontSize: 32),)
+        child: Text(text, style: TextStyle(fontSize: 24),)
         ),
     );
   }

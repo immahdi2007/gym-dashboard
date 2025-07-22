@@ -37,11 +37,14 @@ class BodyBuildersPage extends StatelessWidget {
             flex: 1, 
             child: Align(
             alignment: Alignment.centerRight ,
-            child: AppTextFeild(
-              text: "جستجو", 
-              text_icon: "icons/search.svg", 
-              controller: search_controller, 
-              obscuretext: false,
+            child: SizedBox(
+              width: 400,
+              child: AppTextFeild(
+                text: "جستجو", 
+                text_icon: "icons/search.svg", 
+                controller: search_controller, 
+                obscuretext: false,
+              ),
             ))),
           SizedBox(height: 25,),
 

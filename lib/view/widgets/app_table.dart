@@ -63,14 +63,14 @@ class _AppTableState extends State<AppTable> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      elevation: 2,
-      borderRadius: AppRadius.radius_10,
+      elevation: AppElevation.EL_2,
+      borderRadius: AppRadius.radius_5,
       child: Container(
         width: 1175,
         height: 435,
         decoration: BoxDecoration(
             color: AppColors.surface,
-            borderRadius: AppRadius.radius_10,
+            borderRadius: AppRadius.radius_5,
             // boxShadow: AppColors.container_shadow
             ),
         child: Column(

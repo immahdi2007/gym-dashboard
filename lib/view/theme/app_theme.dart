@@ -10,9 +10,16 @@ class AppColors {
   static const Color hoverPurple = Color(0xFFE9DFFF); // متن فرعی
 }
 class AppRadius {
-  static BorderRadius radius_10 = BorderRadius.circular(5.0); 
+  static BorderRadius radius_5 = BorderRadius.circular(5.0); 
+  static BorderRadius radius_10 = BorderRadius.circular(10.0); 
 }
-
+class AppDimes {
+  static const double spacingXs = 8.0;
+  static const double spacingSm = 16.0;
+  static const double spacingMd = 24.0;
+  static const double spacingLg = 48.0;
+  static const double spacingXl = 64.0;
+}
 class AppPaddings {
   static EdgeInsets none = EdgeInsets.zero;
   static EdgeInsets all16 = EdgeInsets.all(16);
@@ -20,5 +27,5 @@ class AppPaddings {
 
 }
 class AppElevation {
-  static const EL_2 = 2;
+  static const EL_2 = 2.0;
 }

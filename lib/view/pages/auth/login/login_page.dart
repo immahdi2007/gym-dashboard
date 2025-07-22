@@ -1,4 +1,5 @@
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:gym_dashboard_project/view/pages/auth/login/login_form.dart';
@@ -18,28 +19,35 @@ class LoginPage extends StatelessWidget {
               // borderRadius: BorderRadius.circular(16),
             ),
             child: Material(
-              borderRadius: AppRadius.radius_10,
+              borderRadius: AppRadius.radius_5,
               color: AppColors.secondary,
-              elevation: 2,
+              elevation: AppElevation.EL_2,
               child: ConstrainedBox(
-                constraints: BoxConstraints(maxWidth: 500),
+                constraints: BoxConstraints(maxWidth: 450),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 32),
+                  padding: EdgeInsets.symmetric(horizontal: 32, vertical: 48),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       
-
+                      Container(
+                        child: Text("باشگاه بدن سازی نیتروژن", style: TextStyle(
+                          fontSize: 32 ,
+                          fontWeight: FontWeight.bold,
+                          color: AppColors.background
+                        ),),
+                      )
+                      ,
+                      SizedBox(height: AppDimes.spacingMd,),
                       Align(
                         alignment: Alignment.centerRight,
-                        child: Text("ورود",
+                        child: Text("ورود | ثبت نام",
                             style: TextStyle(
-                                fontSize: 48,
-                                fontWeight: FontWeight.bold,
+                                fontSize: 24,
                                 color: AppColors.background)),
                       ),
                       
-                      
+                      SizedBox(height: AppDimes.spacingMd,),
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: AppRadius.radius_10,
@@ -53,28 +61,7 @@ class LoginPage extends StatelessWidget {
                           },
                         ),
                       ),
-                      
-                      
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text("هنوز حساب کاربری ندارید؟"),
-                          SizedBox(width: 4,),
-                          InkWell(
-                            onTap: () {
-                              context.go('/sign_up');
-                            },
-                            child: Text(
-                              "ثبت نام", 
-                              style:  TextStyle(
-                                fontSize: 15,
-                                color: AppColors.background, 
-                                fontWeight: FontWeight.bold),
-                                )
-                          ),
-                        ],
-                      ),
-                      
+                                            
                     ],
                   ),
                 ),
