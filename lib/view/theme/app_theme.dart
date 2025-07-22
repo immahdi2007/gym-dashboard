@@ -11,7 +11,7 @@ class AppColors {
 }
 class AppRadius {
   static BorderRadius radius_5 = BorderRadius.circular(5.0); 
-  static BorderRadius radius_10 = BorderRadius.circular(10.0); 
+  static BorderRadius radius_10 = BorderRadius.circular(8.0); 
 }
 class AppDimes {
   static const double spacingXs = 8.0;
@@ -24,6 +24,7 @@ class AppPaddings {
   static EdgeInsets none = EdgeInsets.zero;
   static EdgeInsets all16 = EdgeInsets.all(16);
   static EdgeInsets all24 = EdgeInsets.all(24);
+  static EdgeInsets all32 = EdgeInsets.all(32);
 
 }
 class AppElevation {

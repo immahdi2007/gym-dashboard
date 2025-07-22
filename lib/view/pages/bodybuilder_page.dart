@@ -13,7 +13,7 @@ class BodyBuildersPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(35.0),
+      padding: AppPaddings.all32,
       child: Column(
         children: [
           Expanded(
@@ -21,7 +21,7 @@ class BodyBuildersPage extends StatelessWidget {
             child: Row(
               children: [
                 Text("لیست\nورزشکاران", style: AppTextStyle.bold_24.copyWith(fontSize: 48, color: AppColors.primary),),
-                SizedBox(width: 100,),
+                SizedBox(width: AppDimes.spacingXl,),
                 Expanded(child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -46,7 +46,7 @@ class BodyBuildersPage extends StatelessWidget {
                 obscuretext: false,
               ),
             ))),
-          SizedBox(height: 25,),
+          SizedBox(height: AppDimes.spacingSm,),
 
           Expanded(
             flex: 6, 

@@ -49,8 +49,8 @@ class _AppTextFeildState extends State<AppTextFeild> {
           obscureText: obscure,
         
           decoration: InputDecoration(
-            // isDense: true,
-            contentPadding: EdgeInsets.symmetric( vertical: 0),
+            isDense: true,
+            // contentPadding: EdgeInsets.symmetric(vertical: 10),
             filled: true,
             fillColor: AppColors.surface,
             border: OutlineInputBorder(
@@ -58,9 +58,13 @@ class _AppTextFeildState extends State<AppTextFeild> {
               borderSide: BorderSide.none
               
             ),
+
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: AppColors.primary, width: 2)
+            ),
             hintText: widget.text,
             hintStyle: TextStyle(fontSize: 16.0, letterSpacing: -0.5),
-            prefixIcon: Container(margin: EdgeInsets.only(left: 10, right: 0) ,child: SvgPicture.network(widget.text_icon,width: 20, height: 20, fit: BoxFit.contain,)), 
+            prefixIcon: Container(margin: EdgeInsets.only(left: !widget.isTellNumber ? 0 : 10 , right: widget.isTellNumber ? 0 : 10) ,child: SvgPicture.network(widget.text_icon,width: 20, height: 20, fit: BoxFit.contain,)), 
             prefixIconConstraints: BoxConstraints(
               maxWidth: double.infinity,
               maxHeight: double.infinity,
