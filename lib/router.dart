@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
+import 'package:gym_dashboard_project/view/pages/auth/login/login_page.dart';
 import 'package:gym_dashboard_project/view/pages/bodybuilder_page.dart';
 import 'package:gym_dashboard_project/view/pages/dashboard_page.dart';
 import 'package:gym_dashboard_project/view/pages/main_page.dart';
@@ -27,6 +28,13 @@ final GoRouter appRouter = GoRouter(initialLocation: '/welcome', routes: [
     name: 'welcome',
     builder: (context, state) => WelcomePage(),
   ),
+  GoRoute(
+    path: '/login',
+    name: 'login',
+    pageBuilder: (context, state) {
+            return NoTransitionPage(child: LoginPage(), key: state.pageKey);
+          },
+    ),
   ShellRoute(
       builder: (context, state, child) => MainPage(child: child),
       routes: [

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gym_dashboard_project/view/theme/App_colors.dart';
+import 'package:gym_dashboard_project/view/theme/app_theme.dart';
 
 class AppTextStyle {
 static const bold_24 = TextStyle(

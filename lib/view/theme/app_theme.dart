@@ -8,7 +8,17 @@ class AppColors {
   static const Color textPrimary = Color(0xFF000000); // متن اصلی
   static const Color errorColor = Color(0xFFB00020); // متن فرعی
   static const Color hoverPurple = Color(0xFFE9DFFF); // متن فرعی
-  static BorderRadius radius_10 = BorderRadius.circular(10.0); 
+}
+class AppRadius {
+  static BorderRadius radius_10 = BorderRadius.circular(5.0); 
+}
 
+class AppPaddings {
+  static EdgeInsets none = EdgeInsets.zero;
+  static EdgeInsets all16 = EdgeInsets.all(16);
+  static EdgeInsets all24 = EdgeInsets.all(24);
 
+}
+class AppElevation {
+  static const EL_2 = 2;
 }

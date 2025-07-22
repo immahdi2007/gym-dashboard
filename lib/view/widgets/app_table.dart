@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gym_dashboard_project/models/bodybuilders.dart';
-import 'package:gym_dashboard_project/view/theme/App_colors.dart';
+import 'package:gym_dashboard_project/view/theme/app_theme.dart';
 import 'package:intl/intl.dart';
 
 class AppTable extends StatefulWidget {
@@ -64,13 +64,13 @@ class _AppTableState extends State<AppTable> {
   Widget build(BuildContext context) {
     return Material(
       elevation: 2,
-      borderRadius: AppColors.radius_10,
+      borderRadius: AppRadius.radius_10,
       child: Container(
         width: 1175,
         height: 435,
         decoration: BoxDecoration(
             color: AppColors.surface,
-            borderRadius: AppColors.radius_10,
+            borderRadius: AppRadius.radius_10,
             // boxShadow: AppColors.container_shadow
             ),
         child: Column(

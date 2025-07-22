@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gym_dashboard_project/view/theme/App_colors.dart';
+import 'package:gym_dashboard_project/view/theme/app_theme.dart';
 import 'package:gym_dashboard_project/view/pages/main_page.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:gym_dashboard_project/router.dart';

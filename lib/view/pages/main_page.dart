@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gym_dashboard_project/view/theme/App_colors.dart';
+import 'package:gym_dashboard_project/view/theme/app_theme.dart';
 import 'package:gym_dashboard_project/view/widgets/app_table.dart';
 import 'package:gym_dashboard_project/view/widgets/main_page_cart.dart';
 import 'package:gym_dashboard_project/view/widgets/sidebar.dart';

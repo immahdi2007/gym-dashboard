@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gym_dashboard_project/view/theme/App_colors.dart';
+import 'package:gym_dashboard_project/view/theme/app_theme.dart';
 import 'package:gym_dashboard_project/view/theme/text_styls.dart';
 import 'package:gym_dashboard_project/view/widgets/app_button.dart';
 
@@ -25,9 +25,9 @@ class WelcomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  AppButton(text: "ورود", onPressed: () {context.go("/");},),
+                  SizedBox(width: 315 , child: AppButton(text: "ورود", onPressed: () {context.go("/login");},)),
                   SizedBox(width: 20,),
-                  AppButton(text: "ثبت نام", onPressed:  () {context.go("/login_up");},)
+                  SizedBox(width: 315 , child: AppButton(text: "ثبت نام", onPressed:  () {context.go("/sign_up");},))
                 ],
               ),
         
