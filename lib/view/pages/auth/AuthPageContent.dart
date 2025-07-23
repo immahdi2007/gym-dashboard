@@ -37,12 +37,17 @@ class AuthPageContent extends StatelessWidget {
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
-                             Align(
+                            isLogin ?
+                            Align(
                               alignment: Alignment.centerRight,
-                               child: SvgPicture.network("icons/back.svg",
-                               color: AppColors.background , height: 50, 
-                                                             ),
-                             ),
+                               child: IconButton(
+                                onPressed: () {context.go('/welcome');},
+                                 icon: SvgPicture.network("icons/back.svg",
+                                 color: AppColors.background , height: 50, width: 50, 
+                                ),
+                               ),
+                             ) : SizedBox.shrink()
+                             ,
                             Column(
                               children: [
                                 SvgPicture.network('icons/barbell.svg', color: Colors.white, height: 50,),

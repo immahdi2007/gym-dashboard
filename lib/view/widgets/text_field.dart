@@ -50,7 +50,6 @@ class _AppTextFeildState extends State<AppTextFeild> {
         
           decoration: InputDecoration(
             isDense: true,
-            // contentPadding: EdgeInsets.symmetric(vertical: 10),
             filled: true,
             fillColor: AppColors.surface,
             border: OutlineInputBorder(
