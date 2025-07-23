@@ -27,11 +27,13 @@ class FormPageContent extends StatelessWidget {
             text: isLogin ? "شماره ی تلفن" : "", 
             text_icon: isLogin ? "icons/num_code.svg" : "icons/sms.svg", 
             controller: telNumber_controller, 
-            obscuretext: false,
-            isTellNumber: true,
+            validatorType: ValidatorType.phone,
           ),
           SizedBox(height: AppDimes.spacingMd,),
-          AppButton(text: isLogin ? "ارسال کد" : "ورود", onPressed: isLogin ? () {context.go('/verify-code');} : () {context.go('/bodybuilders');}),
+          AppButton(
+            text: isLogin ? "ارسال کد" : "ورود", 
+            onPressed: isLogin ? () {context.go('/verify-code');} : () {context.go('/bodybuilders');}
+          ),
           SizedBox(height: AppDimes.spacingSm,),
           
         ],
