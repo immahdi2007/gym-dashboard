@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gym_dashboard_project/view/theme/app_theme.dart';
 
-enum ValidatorType { none, phone, password, email }
+enum ValidatorType { none, phone, password, email, verifyCode}
 
 class AppTextFeild extends StatefulWidget {
   const AppTextFeild({
@@ -12,8 +12,6 @@ class AppTextFeild extends StatefulWidget {
     required this.controller,
     this.validatorType = ValidatorType.none, 
     this.onErrorChange,
-    // required this.obscuretext,
-    // this.isTellNumber = false
   });
 
   final String text;
@@ -30,7 +28,7 @@ class _AppTextFeildState extends State<AppTextFeild> {
   bool obscure = false;
   String? _errorText;
   final FocusNode _focusNode = FocusNode();
-  bool _showerror = true;
+  bool _showerror = false;
 
   @override
   void initState() {
@@ -51,6 +49,7 @@ class _AppTextFeildState extends State<AppTextFeild> {
 
       final error = validate(widget.controller.text);
       if(error != _errorText){
+        _errorText = error;
         widget.onErrorChange?.call(error != null);
         setState(() {});
       }
@@ -82,6 +81,14 @@ class _AppTextFeildState extends State<AppTextFeild> {
       if (value.length < 6) {
         return "پسورد باید حداقل 6 حرف داشته باشد";
       }
+    } else if(widget.validatorType == ValidatorType.verifyCode){
+      if(value == null || value.isEmpty){
+        return "لطفا کد را وارد کنید";
+      }
+      final RegExp verificationCodeRegex = RegExp(r'^\d{6}$');
+      if(!verificationCodeRegex.hasMatch(value)){
+        return "کد تایید باید ۶ رقم باشد";
+      }
     }
 
 
@@ -90,7 +97,7 @@ class _AppTextFeildState extends State<AppTextFeild> {
 
   bool get isPhone => widget.validatorType == ValidatorType.phone;
   bool get isPassword => widget.validatorType == ValidatorType.password;
-  bool get hasError => _errorText != null && _errorText!.isNotEmpty;
+  // bool get hasError => _errorText != null && _errorText!.isNotEmpty;
 
 
   Widget build(BuildContext context) {

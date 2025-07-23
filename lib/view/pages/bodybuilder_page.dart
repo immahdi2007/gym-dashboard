@@ -44,7 +44,7 @@ class BodyBuildersPage extends StatelessWidget {
                 text_icon: "icons/search.svg", 
                 controller: search_controller, 
                 // obscuretext: false,
-                validatorType: ValidatorType.password,
+                validatorType: ValidatorType.none,
               ),
             ))),
           SizedBox(height: AppDimes.spacingSm,),

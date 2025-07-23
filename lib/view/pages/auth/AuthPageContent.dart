@@ -28,7 +28,7 @@ class AuthPageContent extends StatelessWidget {
               child: ConstrainedBox(
                 constraints: BoxConstraints(maxWidth: 450),
                 child: Padding(
-                  padding: EdgeInsets.only(left: 32, right: 32, bottom: 48, top: 24),
+                  padding: EdgeInsets.only(left: 32, right: 32, bottom: 48, top: 8),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -62,7 +62,7 @@ class AuthPageContent extends StatelessWidget {
                         ),
                       )
                       ,
-                      SizedBox(height: AppDimes.spacingMd,),
+                      SizedBox(height: AppDimes.spacingXs,),
                       Align(
                         alignment: Alignment.centerRight,
                         child: Text("ورود | ثبت نام",

@@ -6,7 +6,7 @@ class AppButton extends StatelessWidget {
   const AppButton({super.key, required this.text, required this.onPressed});
 
   final String text;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class AppButton extends StatelessWidget {
               borderRadius: AppRadius.radius_10,
               side: BorderSide(
                 color: AppColors.primary,
-                width: 2
+                width: 1
               )
             )
           )

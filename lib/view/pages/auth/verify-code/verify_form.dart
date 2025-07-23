@@ -10,7 +10,7 @@ class VerifyForm extends StatelessWidget {
       onSubmit: (p0) {
         
       },
-      isLogin: false,
+      mode: FormMode.verifyCode,
     );
   }
 }
