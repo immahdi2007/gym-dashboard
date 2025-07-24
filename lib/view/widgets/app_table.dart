@@ -6,26 +6,9 @@ import 'package:intl/intl.dart';
 
 class AppTable extends StatefulWidget {
 
-   final List<BodyBuilders> bodybuilders = [];
+  final List<BodyBuilders> bodybuilders;
 
-  AppTable({super.key}) {
-    for (var i = 0; i < 20; i++) {
-      bodybuilders.add(
-        BodyBuilders(
-          id: i,
-          name: 'محمد',
-          last_name: 'محمدی',
-          start_date: DateTime(2023, 2, 15),
-          goal: 'افزایش حجم عضلات',
-          injury: 'زانو درد، آرتروز، دیسک کمر، مشکلات روانی',
-          weight: 65.0,
-          height: 170.0,
-          img: "img/img1.jpg",
-          analysis: "کلیک",
-        ),
-      );
-    }
-  }
+  const AppTable({super.key, required this.bodybuilders});
 
   @override
   State<AppTable> createState() => _AppTableState();
@@ -35,6 +18,7 @@ class _AppTableState extends State<AppTable> {
 
   int? _selectedRowIndex;
   int? _hoverdRowIndex;
+
   Widget _buildHeaderCell(String text) {
     return Text(
       text,
@@ -46,7 +30,7 @@ class _AppTableState extends State<AppTable> {
     );
   }
 
-    Widget _buildBodyCell(String text) {
+  Widget _buildBodyCell(String text) {
     return Text(
       text,
       overflow: TextOverflow.ellipsis,
@@ -71,7 +55,6 @@ class _AppTableState extends State<AppTable> {
         decoration: BoxDecoration(
             color: AppColors.surface,
             borderRadius: AppRadius.radius_5,
-            // boxShadow: AppColors.container_shadow
             ),
         child: Column(
           children: [
@@ -110,7 +93,6 @@ class _AppTableState extends State<AppTable> {
               child: ListView.builder(
                 itemCount: widget.bodybuilders.length,
                 itemBuilder: (context, index){
-      
                   final b = widget.bodybuilders[index];
                   final isSelected = _selectedRowIndex == index;
                   final isHovered = _hoverdRowIndex == index;
@@ -123,7 +105,7 @@ class _AppTableState extends State<AppTable> {
                     },
                     onExit: (event) {
                       setState(() {
-                        _hoverdRowIndex = index;
+                        _hoverdRowIndex = -1;
                       });
                     },
                     child: GestureDetector(
